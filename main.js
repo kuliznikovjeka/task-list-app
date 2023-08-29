@@ -84,11 +84,16 @@ let textInput = createInput('Введите задачу', 'input', 'text')
 // Кнопка, создающая задачу
 let btnCreateTask = createBtn('Создать задачу', 'main-btn');
 
+
 // Создание задачи при клике на кнопку + очистка поля ввода
 btnCreateTask.onclick = function () {
 	let titleTask = textInput.value;
-	createTask(titleTask)
-	textInput.value = '';
+
+	if (titleTask === '') {
+	} else {
+		createTask(titleTask)
+		textInput.value = '';
+	}
 }
 
 
