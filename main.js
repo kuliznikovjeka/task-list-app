@@ -79,7 +79,7 @@ let topWrapper = createDiv('wrap-top');
 let taskWrapper = createDiv('wrap-task')
 
 // Создание поле ввода, куда вписываются задачи
-let textInput = createInput('Задача', 'input', 'text')
+let textInput = createInput('Введите задачу', 'input', 'text')
 
 // Кнопка, создающая задачу
 let btnCreateTask = createBtn('Создать задачу', 'main-btn');
@@ -87,7 +87,7 @@ let btnCreateTask = createBtn('Создать задачу', 'main-btn');
 // Создание задачи при клике на кнопку + очистка поля ввода
 btnCreateTask.onclick = function () {
 	let titleTask = textInput.value;
-	createTask(titleTask, 'Выполнено', 'Изменить', 'Удалить')
+	createTask(titleTask)
 	textInput.value = '';
 }
 
